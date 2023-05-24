@@ -127,6 +127,8 @@ local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batterya
 
 local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
 
+local volume_widget = require('awesome-wm-widgets.pactl-widget.volume')
+
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
@@ -239,6 +241,9 @@ awful.screen.connect_for_each_screen(function(s)
 			},
 			batteryarc_widget{
 				show_current_level = true,
+			},
+			volume_widget{
+				widget_type = 'arc',
 			},
             mykeyboardlayout,
             wibox.widget.systray(),
