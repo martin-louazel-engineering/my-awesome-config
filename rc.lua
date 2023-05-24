@@ -6,6 +6,7 @@ pcall(require, "luarocks.loader")
 local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
+local lain = require("lain")
 -- Widget and layout library
 local wibox = require("wibox")
 -- Theme handling library
@@ -122,6 +123,12 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
+
+local bar_spr   = wibox.widget.textbox(
+	lain.util.markup.font("Terminus 3", "\t")
+	.. lain.util.markup.fontfg(beautiful.font, "#777777", "|")
+	.. lain.util.markup.font("Terminus 5", "\t")
+)
 
 local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 
@@ -241,14 +248,18 @@ awful.screen.connect_for_each_screen(function(s)
 				program = 'brightnessctl',
 				step = 2,
 			},
+			bar_spr,
 			batteryarc_widget{
 				show_current_level = true,
 			},
+			bar_spr,
 			volume_widget{
 				widget_type = 'arc',
 			},
+			bar_spr,
             mykeyboardlayout,
             wibox.widget.systray(),
+			bar_spr,
             mytextclock,
             s.mylayoutbox,
 			logout_menu_widget{
