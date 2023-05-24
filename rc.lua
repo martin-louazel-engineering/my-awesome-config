@@ -11,6 +11,8 @@ local lain = require("lain")
 local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
+local xresources = require("beautiful.xresources")
+local dpi = xresources.apply_dpi
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
@@ -51,6 +53,8 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+local theme = beautiful.get()
+theme.useless_gap = dpi(10)
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
