@@ -114,7 +114,8 @@ else
 end
 
 
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
+local LAUNCHER_ICON = "/usr/share/icons/Humanity-Dark/places/48/start-here.svg"
+mylauncher = awful.widget.launcher({ image = LAUNCHER_ICON,
                                      menu = mymainmenu })
 
 -- Menubar configuration
