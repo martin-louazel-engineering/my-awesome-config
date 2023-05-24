@@ -123,7 +123,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- }}}
 
 -- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
+-- mykeyboardlayout = awful.widget.keyboardlayout()
 
 local bar_spr   = wibox.widget.textbox(
 	lain.util.markup.font("Terminus 3", "\t")
@@ -258,7 +258,6 @@ awful.screen.connect_for_each_screen(function(s)
 				widget_type = 'arc',
 			},
 			bar_spr,
-            mykeyboardlayout,
             wibox.widget.systray(),
 			bar_spr,
             mytextclock,
