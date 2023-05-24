@@ -1,0 +1,4 @@
+brighnessctl
+compton
+i3lock
+i3lock-fancy
