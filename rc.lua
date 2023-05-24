@@ -129,6 +129,8 @@ local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightne
 
 local volume_widget = require('awesome-wm-widgets.pactl-widget.volume')
 
+local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
+
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
@@ -249,6 +251,9 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
+			logout_menu_widget{
+				onlock = function() awful.spawn.with_shell("i3lock-fancy") end,
+			},
         },
     }
 end)
