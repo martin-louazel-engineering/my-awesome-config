@@ -611,4 +611,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("compton")
 local WALLPAPER_PATH = "/usr/share/backgrounds/warty-final-ubuntu.png"
 awful.spawn.with_shell("feh --bg-fill "..WALLPAPER_PATH)
+awful.spawn.with_shell("nm-applet")
 
