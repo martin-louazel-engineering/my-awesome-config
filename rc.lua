@@ -266,9 +266,10 @@ awful.screen.connect_for_each_screen(function(s)
 				widget_type = 'arc',
 			},
 			bar_spr,
+            mytextclock,
+			bar_spr,
             wibox.widget.systray(),
 			bar_spr,
-            mytextclock,
             s.mylayoutbox,
 			logout_menu_widget{
 				onlock = function() awful.spawn.with_shell("i3lock-fancy") end,
