@@ -394,7 +394,10 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() awful.spawn.with_shell("rofi -show drun") end,
-              {description = "Run Rofi Menu", group = "launcher"})
+              {description = "Run Rofi Menu", group = "launcher"}),
+	awful.key({}, "XF86AudioRaiseVolume", function() volume_widget:inc(5) end),
+	awful.key({}, "XF86AudioLowerVolume", function() volume_widget:dec(5) end),
+	awful.key({}, "XF86AudioMute", function() volume_widget:toggle() end)
 )
 
 clientkeys = gears.table.join(
