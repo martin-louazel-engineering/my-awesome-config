@@ -130,9 +130,9 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- mykeyboardlayout = awful.widget.keyboardlayout()
 
 local bar_spr   = wibox.widget.textbox(
-	lain.util.markup.font("Terminus 3", "\t")
+	lain.util.markup.font("Terminus 3", "   ")
 	.. lain.util.markup.fontfg(beautiful.font, "#777777", "|")
-	.. lain.util.markup.font("Terminus 5", "\t")
+	.. lain.util.markup.font("Terminus 5", "   ")
 )
 
 local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
