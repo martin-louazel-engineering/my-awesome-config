@@ -308,18 +308,14 @@ globalkeys = gears.table.join(
         end,
         {description = "focus next by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "j",
-        function ()
-            awful.client.focus.byidx( 1)
-        end,
-        {description = "focus next by index", group = "client"}
-    ),
-    awful.key({ modkey,           }, "k",
-        function ()
-            awful.client.focus.byidx(-1)
-        end,
-        {description = "focus previous by index", group = "client"}
-    ),
+    awful.key({ modkey }, "h", function () awful.client.focus.global_bydirection("left") end,
+        {description = "focus client on the left", group = "client"}),
+    awful.key({ modkey }, "j", function () awful.client.focus.global_bydirection("down") end,
+        {description = "focus client on the bottom", group = "client"}),
+    awful.key({ modkey }, "k", function () awful.client.focus.global_bydirection("up") end,
+        {description = "focus client on the top", group = "client"}),
+    awful.key({ modkey }, "l", function () awful.client.focus.global_bydirection("right") end,
+        {description = "focus client on the right", group = "client"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Control"   }, "h", function () awful.client.swap.global_bydirection("left") end,
