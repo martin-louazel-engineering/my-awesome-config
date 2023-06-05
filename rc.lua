@@ -250,10 +250,12 @@ awful.screen.connect_for_each_screen(function(s)
 			bar_spr,
             s.mytaglist,
             s.mypromptbox,
+			bar_spr,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+			bar_spr,
 			brightness_widget{
 				type = 'icon_and_text',
 				program = 'brightnessctl',
