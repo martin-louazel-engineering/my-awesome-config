@@ -395,7 +395,9 @@ globalkeys = gears.table.join(
               {description = "Run Rofi Menu", group = "launcher"}),
 	awful.key({}, "XF86AudioRaiseVolume", function() volume_widget:inc(5) end),
 	awful.key({}, "XF86AudioLowerVolume", function() volume_widget:dec(5) end),
-	awful.key({}, "XF86AudioMute", function() volume_widget:toggle() end)
+	awful.key({}, "XF86AudioMute", function() volume_widget:toggle() end),
+	awful.key({}, "XF86MonBrightnessUp", function() brightness_widget:inc() end),
+	awful.key({}, "XF86MonBrightnessDown", function() brightness_widget:dec() end)
 )
 
 clientkeys = gears.table.join(
