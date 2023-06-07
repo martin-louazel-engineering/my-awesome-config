@@ -543,6 +543,18 @@ awful.rules.rules = {
       }, properties = { titlebars_enabled = true }
     },
 
+	{ rule = {
+		class = "firefox",
+		name = "Picture-in-Picture"
+		},
+	properties = {
+		floating = true,
+		sticky = true,
+		ontop = true,
+		titlebars_enabled = true -- TODO: enable move on click instead of this
+		}
+	},
+
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { screen = 1, tag = "2" } },
