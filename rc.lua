@@ -120,7 +120,7 @@ end
 
 local LAUNCHER_ICON = "/usr/share/icons/Humanity-Dark/places/48/start-here.svg"
 mylauncher = awful.widget.launcher({ image = LAUNCHER_ICON,
-                                     menu = mymainmenu })
+                                     command = "rofi -show combi" })
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
